@@ -24,14 +24,18 @@ public class Pool : MonoBehaviour
             GameObject kimGo = Instantiate(kimPrefab, position, rotation);
             kim = kimGo.GetComponent<KimBehavior>();
         }
-        
+
         return kim;
     }
 
 
     public void Kill(KimBehavior kim)
     {
+       // kim.Restore();
+
         kim.gameObject.SetActive(false);
         kims.Add(kim);
     }
+
+    
 }
